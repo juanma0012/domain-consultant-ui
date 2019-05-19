@@ -6,12 +6,14 @@
 
 <script>
 import DomainConsultant from './components/DomainConsultant.vue'
+import store from './vuex/store'
 
 export default {
   name: 'app',
   components: {
     DomainConsultant
-  }
+  },
+  store
 }
 </script>
 

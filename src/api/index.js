@@ -1,16 +1,22 @@
-import Vue from 'vue'
-import VueResource from 'vue-resource'
+import Vue from 'vue';
+import VueResource from 'vue-resource';
+const uuidv4 = require('uuid/v4');
 
-Vue.use(VueResource)
+Vue.use(VueResource);
 
-const ConsultingDomainResource = Vue.resource('http://localhost:3333/information{/id}')
-const HistoryResource = Vue.resource('http://localhost:3333/history')
+if (!sessionStorage.getItem("user_session_id")) {
+    sessionStorage.setItem('user_session_id', uuidv4());
+}
+Vue.http.headers.common['User-Session-Id'] = sessionStorage.getItem("user_session_id");
 
+const endpoint = "http://localhost:3333";
+const ConsultingDomainResource = Vue.resource(`${endpoint}/information{/domain}`);
+const HistoryResource = Vue.resource(`${endpoint}/history`);
 export default {
-  fetchRecords: () => {
-    return HistoryResource.get()
-  },
-  fetchDomainResults: (domain) => {
-    return ConsultingDomainResource.get(domain)
-  }
+    fetchDomainResults: (domain) => {
+        return ConsultingDomainResource.get({ domain: domain });
+    },
+    fetchRecords: () => {
+        return HistoryResource.get();
+    }
 }

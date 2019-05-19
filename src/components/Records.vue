@@ -1,34 +1,24 @@
 <template>
     <b-container class="bv-example-row">
-        <b-row>
-            Records
-        </b-row>
-        <b-row>
-            1 Records
-        </b-row>
-        <b-row>
-            2 Records
-        </b-row>
+        <ul id="example-1">
+            <li v-for="record in records" v-bind:key="record.domain">
+                {{ record }}
+            </li>
+        </ul>
     </b-container>
 </template>
 
 <script>
-    import api from "../api/index";
+    import { mapGetters, mapActions } from 'vuex'
     export default {
         name: "records",
-        props: {
-            msg: String
-        },
-        methods: {
-            getRecords() {
-                api.fetchRecords().then(response => {
-                    console.log(response.data);
-                });
-            }
-        },
         mounted() {
-            this.getRecords();
-        }
+            this.populateRecordsList();
+        },
+        methods: mapActions(["populateRecordsList"]),
+        computed: mapGetters({
+            records: "getRecords"
+        })
     };
 </script>
 
