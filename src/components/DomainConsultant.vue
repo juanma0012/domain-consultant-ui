@@ -1,11 +1,29 @@
 <template>
-    <b-container class="bv-example-row">
+    <b-container>
         <b-row>
-            <router-link to="/">Go to Search</router-link>
-            <router-link to="/records">Go to Records</router-link>
+            <div>
+                <b-navbar>
+                    <b-navbar-nav>
+                        <b-nav-item>
+                            <b-button
+                                variant="outline-info"
+                                :to="{ path: '/'}"
+                            >Searhing</b-button>
+                        </b-nav-item>
+                        <b-nav-item>
+                            <b-button
+                                variant="outline-secondary"
+                                :to="{ path: '/records'}"
+                            >History</b-button>
+                        </b-nav-item>
+                    </b-navbar-nav>
+                </b-navbar>
+            </div>
         </b-row>
         <b-row>
-            <router-view></router-view>
+            <b-card>
+                <router-view></router-view>
+            </b-card>
         </b-row>
     </b-container>
 </template>
@@ -13,25 +31,17 @@
 <script>
     export default {
         name: "domain-consultant",
-        components: {
-        }
+        components: {}
     };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-    margin: 40px 0 0;
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-li {
-    display: inline-block;
-    margin: 0 10px;
-}
-a {
-    color: #42b983;
-}
+    div.card{
+        width: 100%;
+        background-color: #f5f3f3;
+    }
+    div.card-body{
+        width: inherit;
+    }
 </style>
