@@ -8,7 +8,8 @@ Vue.use(Vuex)
 
 const state = {
   recordsList: [],
-  result: null
+  result: null,
+  processingData: false
 }
 
 export default new Vuex.Store({

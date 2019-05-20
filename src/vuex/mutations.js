@@ -6,5 +6,8 @@ export default {
     },
     [types.GET_RESULT](state, result) {
         state.result = result
+    },
+    [types.IS_PROCESSING](state, processingData) {
+        state.processingData = processingData
     }
 }

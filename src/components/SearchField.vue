@@ -28,7 +28,6 @@
             searchDomain() {
                 let text;
                 text = this.domain.trim();
-                console.log("text",text)
                 if (text) {
                     this.$store.dispatch("getResult", text);
                 }

@@ -1,7 +1,7 @@
 <template>
     <b-container class="bv-example-row">
         <ul id="example-1">
-            <li v-for="record in records" v-bind:key="record.domain">
+            <li v-for="record in records" v-bind:key="record.created_at">
                 {{ record }}
             </li>
         </ul>

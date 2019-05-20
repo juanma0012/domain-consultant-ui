@@ -1,9 +1,10 @@
 <template>
   <b-container class="bv-example-row">
-    <b-row>
-      <b-col>1 of 3</b-col>
-      <b-col>2 of 3</b-col>
-      <b-col>3 of 3</b-col>
+    <b-row v-if="inProgress && information ">
+      Wait for it
+    </b-row>
+    <b-row v-else>
+      {{information}}
     </b-row>
   </b-container>
 </template>
@@ -11,9 +12,7 @@
 <script>
 export default {
   name: "outcome",
-  props: {
-    msg: String
-  }
+  props: ['information', 'inProgress']
 };
 </script>
 
