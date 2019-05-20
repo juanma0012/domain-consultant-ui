@@ -1,6 +1,12 @@
 {
   "name": "domain-consultant-ui",
-  "version": "0.1.0",
+  "homepage": "https://juanma0012.github.io/domain-consultant-ui",
+  "version": "1.0.0",
+  "author": {
+    "name": "Juan Sanchez",
+    "email": "juanma0012@gmail.com",
+    "url": "https://www.linkedin.com/in/juanmanuels/"
+  },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
