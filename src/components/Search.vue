@@ -1,7 +1,7 @@
 <template>
     <b-container fluid >
         <b-row class="justify-content-md-center">
-                <h1>Consultant Domain</h1>
+                <h1>Domain Consultant</h1>
         </b-row>
         <b-row class="justify-content-md-center">
                 <search-field />

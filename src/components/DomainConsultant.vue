@@ -8,7 +8,7 @@
                             <b-button
                                 variant="outline-info"
                                 :to="{ path: '/'}"
-                            >Searhing</b-button>
+                            >Searching</b-button>
                         </b-nav-item>
                         <b-nav-item>
                             <b-button
