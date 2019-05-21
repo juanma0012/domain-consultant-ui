@@ -1,17 +1,17 @@
 {
   "name": "domain-consultant-ui",
-  "homepage": "https://juanma0012.github.io/domain-consultant-ui",
   "version": "1.0.0",
+  "private": true,
   "author": {
     "name": "Juan Sanchez",
     "email": "juanma0012@gmail.com",
     "url": "https://www.linkedin.com/in/juanmanuels/"
   },
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
@@ -28,8 +28,12 @@
     "@babel/polyfill": "^7.4.4",
     "@vue/cli-plugin-babel": "^3.7.0",
     "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-plugin-unit-jest": "^3.7.0",
     "@vue/cli-service": "^3.7.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
     "bootstrap": "^4.3.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
@@ -63,5 +67,6 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "homepage": "https://juanma0012.github.io/domain-consultant-ui"
 }
