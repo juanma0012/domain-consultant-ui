@@ -1,6 +1,7 @@
 import { GET_RESULT, POPULATE_RECORDS_LIST, IS_PROCESSING } from './mutation_types';
 import api from '../api';
 
+// Request the information to the API using the service api.
 export default {
     populateRecordsList: ({ commit }) => {
         return api.fetchRecords().then(response => {

@@ -1,0 +1,9 @@
+pages:
+  script:
+    - mv public publicbck
+    - mv docs public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
