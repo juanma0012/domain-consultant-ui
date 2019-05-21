@@ -15,4 +15,4 @@ export const router = new VueRouter({
             component: Records
         }
     ]
-})
+});

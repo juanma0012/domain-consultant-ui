@@ -1,4 +1,4 @@
-import * as types from './mutation_types'
+import * as types from './mutation_types';
 
 export default {
     [types.POPULATE_RECORDS_LIST](state, records) {
@@ -10,4 +10,4 @@ export default {
     [types.IS_PROCESSING](state, processingData) {
         state.processingData = processingData
     }
-}
+};

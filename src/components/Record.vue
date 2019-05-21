@@ -52,14 +52,13 @@
     };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-div.width-all,
-div.card {
-    width: 100%;
-    margin-bottom: 10px;
-}
-div.card-body {
-    width: inherit;
-}
+    div.width-all,
+    div.card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    div.card-body {
+        width: inherit;
+    }
 </style>

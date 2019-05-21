@@ -30,12 +30,10 @@
 
 <script>
     export default {
-        name: "domain-consultant",
-        components: {}
+        name: "domain-consultant"
     };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     div.card{
         width: 100%;
