@@ -11,7 +11,7 @@ if (!localStorage.getItem("user_session_id")) {
 Vue.http.headers.common['User-Session-Id'] = localStorage.getItem("user_session_id");
 
 // Setting endpoint depending if the app is running in production or local environment.
-const endpoint =  process.env.NODE_ENV === 'production' ? "http://ec2-3-82-99-106.compute-1.amazonaws.com:3333" : "http://localhost:3333";
+const endpoint =  process.env.NODE_ENV === 'production' ? "http://ec2-52-91-201-222.compute-1.amazonaws.com:3333" : "http://localhost:3333";
 
 // Services to the API
 const ConsultingDomainResource = Vue.resource(`${endpoint}/information{/domain}`);
